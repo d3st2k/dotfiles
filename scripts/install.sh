@@ -14,4 +14,7 @@ ln -s ~/dotfiles/configs/fonts ~/.fonts
 
 # Reboot
 fc-cache -fv # Refresh fonts
-sudo reboot # If you don't have admin privileges. Just close and open the terminal
+echo "Closing the terminal to refresh everything ..."
+echo "If you don't want to close it, press <CTRL-C>"
+sleep 5
+exit
