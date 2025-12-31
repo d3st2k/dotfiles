@@ -1,4 +1,5 @@
 # Clone the repository in the $HOME dir
+cd 
 git clone https://github.com/d3st2k/dotfiles.git
 
 # Install required packages/lang

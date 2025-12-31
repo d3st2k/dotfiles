@@ -11,8 +11,5 @@ Until then enjoy the exploration of all this repo contains! :)
 Just run the below code into your terminal and everything is set by itself!
 
 ```
-
-cd # Go to $HOME dir
 curl -s https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh | bash
-
 ```
