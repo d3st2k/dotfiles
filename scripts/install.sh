@@ -1,3 +1,5 @@
+# Clone the repository in the $HOME dir
+git clone https://github.com/d3st2k/dotfiles.git
 
 # Install required packages/lang
 sudo apt update
