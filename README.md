@@ -1,22 +1,18 @@
-# Configs
+# Dotfiles
 
 Hi to everyone,
-This is my personal 
-Just run this code section in your terminal
+
+This is my personal dotfiles repository which I use to setup my workspace on any new device faster then manually doing everything over and over again. 
+You can find a lot of things here, but I am too lazy to do a big ass README.md right now, so I will let AI do it for us a bit later.
+Until then enjoy the exploration of all this repo contains! :)
+
+## Setup
+
+Just run the below code into your terminal and everything is set by itself!
 
 ```
+
 cd # Go to $HOME dir
-
-# Clone the repo (You need GIT set up ofc!!)
-git clone https://github.com/d3st2k/configs.git
-# git clone git@github.com:d3st2k/configs.git # If you use SSH
-
-# Create symlinks to point to repo
-ln -s ~/configs/nvim ~/.config/nvim
-ln -s ~/configs/fonts ~/.fonts
-
-# Reboot
-fc-cache -fv # Refresh fonts
-sudo reboot # If you don't have admin privileges. Just close and open the terminal
+curl -s https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh | bash
 
 ```
