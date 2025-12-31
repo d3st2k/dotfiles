@@ -21,15 +21,17 @@ sudo apt -y install snapd curl git lua5.4
 sudo snap install nvim --classic
 
 # Create symlinks to point to repo
-ln -s ~/dotfiles/configs/zsh/.zshrc ~/.zshrc
-ln -s ~/dotfiles/configs/nvim ~/.config/nvim
-ln -s ~/dotfiles/configs/fonts ~/.fonts
+ln -sf ~/dotfiles/configs/zsh/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/configs/nvim ~/.config/nvim
+ln -sf ~/dotfiles/configs/fonts ~/.fonts
 
 # Change SHELL to ZSH
 sudo apt -y install zsh
 sudo chsh -s $(which zsh) # Set ZSH shell as default
+RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # Install Oh-My-Zsh
 
-# Reboot
+# Refresh the terminal 
 fc-cache -fv # Refresh fonts
+sudo apt autoremove
 echo "Close the terminal to refresh everything ..."
