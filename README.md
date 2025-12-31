@@ -12,11 +12,10 @@ Just run the below code into your terminal and everything is set by itself!
 
 If you use `HTTPS` for GIT use this :downarrow:
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh | bash
 ```
 
 If you use `SSH` for GIT use this :downarrow:
 ```
-PROTOCOL="SSH" \
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh | PROTOCOL=SSH bash
 ```

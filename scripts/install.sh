@@ -1,11 +1,13 @@
+#!/usr/bin/env bash
+
 # Clone the repository in the $HOME dir
 cd 
 
 # Set PROTOCOL to the one that you want to use
 [[ -n "$PROTOCOL" ]] || PROTOCOL="HTTPS"
-if [ $PROTOCOL = "HTTPS" ]; then
+if [[ $PROTOCOL = "HTTPS" ]]; then
 	git clone https://github.com/d3st2k/dotfiles.git
-elif [ $PROTOCOL = "SSH" ]; then
+elif [[ $PROTOCOL = "SSH" ]]; then
 	git clone git@github.com:d3st2k/dotfiles.git
 else
 	echo "$PROTOCOL is not supported!!"
