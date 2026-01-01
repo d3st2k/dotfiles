@@ -1,9 +1,9 @@
 # Custom alias path
-alias aliases="nvim ~/.oh-my-zsh/custom/aliases.zsh"
+alias aliases="nvim ~/dotfiles/configs/zsh/custom/aliases.zsh"
 
 # Shell aliases
-alias vim="nvim"
-alias zsh="nvim ~/.zshrc"
+alias v="nvim"
+alias zsh="nvim ~/dotfiles/configs/zsh/.zshrc"
 alias szsh="source ~/.zshrc"
 
 # Folder aliases
