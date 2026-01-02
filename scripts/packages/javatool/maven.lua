@@ -9,6 +9,9 @@ do
 	-- Convert to absolute path if needed
 	if not script_dir:match("^/") then
 		local handle = io.popen("cd '" .. script_dir .. "' && pwd")
+		if not handle then
+			error("Failed to open pipe")
+		end
 		script_dir = handle:read("*l")
 		handle:close()
 	end

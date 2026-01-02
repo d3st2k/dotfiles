@@ -1,7 +1,5 @@
 #!/usr/bin/env lua
 
--- Portable path setup: finds script directory and adds project root to package.path
--- Copy this block to any script that needs to require modules from this project
 do
 	local function get_script_dir()
 		local str = debug.getinfo(2, "S").source:sub(2)
@@ -25,9 +23,8 @@ do
 	package.path = project_root .. "/?.lua;" .. project_root .. "/?/init.lua;" .. package.path
 end
 
--- Required modules
--- local inputs = require("utils.inputs")
--- local logs = require("logs.init")
--- ... add your requires here
+-- Install Neovim v0.11
+os.execute("sudo snap install nvim --classic")
 
--- Your code here
+-- Create symlinks to point to repo
+os.execute("ln -sf ~/dotfiles/configs/nvim ~/.config/nvim")

@@ -25,9 +25,27 @@ do
 	package.path = project_root .. "/?.lua;" .. project_root .. "/?/init.lua;" .. package.path
 end
 
--- Required modules
--- local inputs = require("utils.inputs")
--- local logs = require("logs.init")
--- ... add your requires here
+-- Export the ZSH CUSTOM folder path
+os.execute([[export ZSH_CUSTOM="$HOME/dotfiles/configs/zsh/custom"]])
 
--- Your code here
+-- Create symlinks to point to repo
+os.execute("ln -sf ~/dotfiles/configs/zsh/.zshrc ~/.zshrc")
+
+-- Change SHELL to ZSH
+os.execute("sudo apt -y install zsh")
+
+-- Install Oh-My-Zsh
+os.execute([[
+  RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+]])
+
+-- Add ZSH Plugins
+os.execute([[
+  while read -r repo; do
+    git clone "$repo" "$ZSH_CUSTOM/plugins/$(basename "$repo" .git)"
+  done <"$ZSH_CUSTOM/plugins/plugins.list"
+]])
+
+-- Change the SHELL
+os.execute("sudo chsh -s $(which zsh)")
