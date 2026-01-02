@@ -1,5 +1,5 @@
 # Ignore all plugin repos
-dotfiles/configs/zsh/custom/plugins/*
+configs/zsh/custom/plugins/*
 
 # But keep the plugin list
-!dotfiles/configs/zsh/custom/plugins/plugins.list
+!configs/zsh/custom/plugins/plugins.list
