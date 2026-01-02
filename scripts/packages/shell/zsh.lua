@@ -29,7 +29,7 @@ end
 os.execute([[export ZSH_CUSTOM="$HOME/dotfiles/configs/zsh/custom"]])
 
 -- Create symlinks to point to repo
-os.execute("ln -sf ~/dotfiles/configs/zsh/.zshrc ~/.zshrc")
+os.execute("ln -sf $HOME/dotfiles/configs/zsh/.zshrc $HOME/.zshrc")
 
 -- Change SHELL to ZSH
 os.execute("sudo apt -y install zsh")

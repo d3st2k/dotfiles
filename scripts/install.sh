@@ -18,11 +18,11 @@ sudo apt update
 sudo apt -y install snapd curl git lua5.4
 
 # Install external packages
-lua packages/ide/nvim.lua
-lua packages/shell/zsh.lua
+lua $HOME/dotfiles/scripts/packages/ide/nvim.lua
+lua $HOME/dotfiles/scripts/packages/shell/zsh.lua
 
 # Create symlinks to point to repo
-ln -sf ~/dotfiles/configs/fonts ~/.fonts
+ln -sf $HOME/dotfiles/configs/fonts ~/.fonts
 
 # Refresh fonts
 fc-cache -fv

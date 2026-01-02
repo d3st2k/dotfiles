@@ -27,4 +27,4 @@ end
 os.execute("sudo snap install nvim --classic")
 
 -- Create symlinks to point to repo
-os.execute("ln -sf ~/dotfiles/configs/nvim ~/.config/nvim")
+os.execute("ln -sf $HOME/dotfiles/configs/nvim $HOME/config/nvim")
