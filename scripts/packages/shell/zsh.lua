@@ -26,7 +26,7 @@ do
 end
 
 -- Export the ZSH CUSTOM folder path
-os.execute([[export ZSH_CUSTOM="$HOME/dotfiles/configs/zsh/custom"]])
+local ZSH_CUSTOM = os.getenv("HOME") .. "/dotfiles/configs/zsh/custom"
 
 -- Create symlinks to point to repo
 os.execute("ln -sf $HOME/dotfiles/configs/zsh/.zshrc $HOME/.zshrc")
@@ -41,11 +41,12 @@ os.execute([[
 ]])
 
 -- Add ZSH Plugins
-os.execute([[
+os.execute(([[
   while read -r repo; do
-    git clone "$repo" "$ZSH_CUSTOM/plugins/$(basename "$repo" .git)"
-  done <"$ZSH_CUSTOM/plugins/plugins.list"
-]])
+    plugin="%s/plugins/$(basename "$repo" .git)"
+    [ -d "$plugin" ] || git clone "$repo" "$plugin"
+  done < "%s/plugins/plugins.list"
+]]):format(ZSH_CUSTOM, ZSH_CUSTOM))
 
 -- Change the SHELL
 os.execute("sudo chsh -s $(which zsh)")

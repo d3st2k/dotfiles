@@ -18,6 +18,7 @@ sudo apt update
 sudo apt -y install snapd curl git lua5.4
 
 # Install external packages
+export ZSH_CUSTOM="$HOME/dotfiles/configs/zsh/custom"
 lua $HOME/dotfiles/scripts/packages/ide/nvim.lua
 lua $HOME/dotfiles/scripts/packages/shell/zsh.lua
 
