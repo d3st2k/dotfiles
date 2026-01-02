@@ -19,3 +19,11 @@ If you use `SSH` for GIT use this 👇:
 ```
 curl -fsSL https://raw.githubusercontent.com/d3st2k/dotfiles/main/scripts/install.sh | PROTOCOL=SSH bash
 ```
+
+## Remove/Reset
+
+Now to remove everything that was setup with this repo including the `configs`, `packages` and the repository itself.
+Just use this 👇:
+```
+dotfiles/scripts/unintstall.sh
+```

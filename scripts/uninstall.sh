@@ -12,9 +12,11 @@ fi
 
 echo "User-level uninstall complete."
 
+# Removing extra packages
 sudo apt remove -y zsh zsh-common
 sudo apt autoremove -y
 
 rm -rf .oh-my-zsh
 rm -rf .zcompdump*
 rm -rf .zsh*
+rm -rf dotfiles
